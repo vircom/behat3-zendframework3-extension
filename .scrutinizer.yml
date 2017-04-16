@@ -36,7 +36,7 @@ build:
     tests:
         override:
             -
-                command: 'bin/phpspec run -f progress -c phpcpec.yml.dist'
+                command: 'bin/phpspec run -f progress -c phpspec.yml.dist'
                 coverage:
                     file: 'coverage/coverage.clover'
                     format: 'php-clover'
