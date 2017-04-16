@@ -11,8 +11,10 @@ extensions:
         format:
             - text
             - html
+            - clover
         output:
             html: coverage
+            clover: coverage/coverage.clover
         show_uncovered_files: true
         lower_upper_bound: 35
         high_lower_bound: 70
