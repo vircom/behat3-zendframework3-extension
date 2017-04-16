@@ -1,0 +1,46 @@
+default:
+  formatters:
+    pretty:
+      verbose: true
+    
+  extensions:
+    Behat\MinkExtension:
+      base_url: "http://pzr3.localhost"
+      sessions:
+        goutte_session:
+          goutte:
+            guzzle_parameters:
+              ssl.certificate_authority: false
+        selenium_chrome_session:
+          selenium2:
+            browser: chrome
+        selenium_firefox_session:
+          selenium2:
+            browser: firefox
+      browser_name: chrome
+      default_session: goutte
+      javascript_session: selenium_firefox_session
+      goutte:
+        guzzle_parameters:
+          curl.options:
+            CURLOPT_SSL_VERIFYPEER: false
+            CURLOPT_CERTINFO: false
+            defaults:
+              verify: false
+              ssl.certificate_authority: false
+            selenium2:
+              wd_host: "http://127.0.0.1:4444/wd/hub"
+              capabilities: { 'browser': 'chrome', 'version': '52.0' }
+
+chrome:
+  extensions:
+    Behat\MinkExtension:
+      default_session: selenium_chrome_session
+
+firefox:
+  extensions:
+    Behat\MinkExtension:
+      default_session: selenium_firefox_session
+            
+imports:
+ - module/Version/behat.yml.dist

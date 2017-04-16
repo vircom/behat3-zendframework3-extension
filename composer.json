@@ -1,0 +1,58 @@
+{
+    "name": "vircom/behat3-zendframework3-extension",
+    "description": "Behat Zend Framework 3 Integration Extension",
+    "type": "library",
+    "license": "MIT",
+
+    "keywords": [
+        "behat",
+        "extension",
+        "zend",
+        "zf3",
+        "framework"
+    ],
+
+    "minimum-stability": "stable",
+
+    "authors": [
+        {
+            "name": "VirCom",
+            "email": "kamil.rak@vircom.pl",
+            "role": "Developer"
+        }
+    ],
+
+    "support": {
+        "email": "kamil.rak@vircom.pl"
+    },
+
+    "require": {
+        "php": ">=7.0",
+        "behat/behat": "^3.3",
+        "zendframework/zend-mvc": "^3.0"
+    },
+
+    "require-dev": {
+        "phpspec/phpspec": "^3.2",
+        "leanphp/phpspec-code-coverage": "^3.1",
+        "friendsofphp/php-cs-fixer": "^2.1",
+        "phpmd/phpmd": "^2.6"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "VirCom\\Behat3ZendFramework3Extension\\": "src/"
+        }
+    },
+    
+    "config": {
+        "bin-dir": "bin"
+    },
+    
+    "scripts": {
+        "code-fix": "php-cs-fixer fix --verbose",
+        "code-check": "php-cs-fixer fix --verbose --dry-run",
+        "md": "phpmd src text phpmd.xml.dist",
+        "test": "phpspec run"
+    }
+}

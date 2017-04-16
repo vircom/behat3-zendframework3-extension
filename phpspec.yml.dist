@@ -1,0 +1,22 @@
+formatter.name: pretty
+suites:
+    Behat3ZendFrameworkExtension:
+        namespace: VirCom\Behat3ZendFramework3Extension
+        psr4_prefix: VirCom\Behat3ZendFramework3Extension
+        spec_prefix: spec
+        src_path: %paths.config%/src
+        spec_path: %paths.config%
+extensions:
+    LeanPHP\PhpSpec\CodeCoverage\CodeCoverageExtension:
+        format:
+            - text
+            - html
+        output:
+            html: coverage
+        show_uncovered_files: true
+        lower_upper_bound: 35
+        high_lower_bound: 70
+        whitelist:
+            - src
+        blacklist_files:
+            - src/Services/ZendFramework3Initializer.php
