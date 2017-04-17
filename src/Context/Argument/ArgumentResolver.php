@@ -52,7 +52,12 @@ class ArgumentResolver implements
     protected function resolveArgument(
         string $argument
     ) {
-        if (substr($argument, 0, 1) === "@") {
+        if (substr($argument, 0, 1) !== "@") {
+            return $argument;
+        }
+        
+        $serviceManager = $this->application->getServiceManager();
+        if($serviceManager->has(substr($argument, 1))) {
             return $this->application
                 ->getServiceManager()
                 ->get(substr($argument, 1));
