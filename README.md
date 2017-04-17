@@ -1,7 +1,6 @@
 # Behat 3 Zend Framework 3 Extension
 -----
 [![Build Status](https://travis-ci.org/vircom/behat3-zendframework3-extension.svg?branch=master)](https://travis-ci.org/vircom/behat3-zendframework3-extension)
-[![Code Coverage](https://scrutinizer-ci.com/g/acelaya/doctrine-enum-type/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/acelaya/doctrine-enum-type/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vircom/behat3-zendframework3-extension/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vircom/behat3-zendframework3-extension/?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/vircom/behat3-zendframework3-extension/v/stable.png)](https://packagist.org/packages/vircom/behat3-zendframework3-extension)
 [![Total Downloads](https://poser.pugx.org/vircom/behat3-zendframework3-extension/downloads.png)](https://packagist.org/vircom/behat3-zendframework3-extension)
