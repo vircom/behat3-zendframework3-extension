@@ -55,12 +55,26 @@ class ArgumentResolverSpec extends ObjectBehavior
             ->shouldBeCalled()
             ->willReturn($serviceManager);
         
+        $serviceManager->has()
+            ->shouldBeCalled()
+            ->withArguments([
+                substr($arguments[0], 1),
+            ])
+            ->willReturn(true);
+        
         $serviceManager->get()
             ->shouldBeCalled()
             ->withArguments([
                 substr($arguments[0], 1),
             ])
             ->willReturn($result[0]);
+        
+        $serviceManager->has()
+            ->shouldBeCalled()
+            ->withArguments([
+                substr($arguments[1], 1),
+            ])
+            ->willReturn(true);
         
         $serviceManager->get()
             ->shouldBeCalled()
